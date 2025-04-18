@@ -1,4 +1,3 @@
-## 📋 Overview
 
 # 🧾 Leave Management System
 
@@ -48,10 +47,6 @@ Employees can submit leave requests online, while administrators (Admins) are ab
   - Approve or reject requests  
   - Filter and manage requests
 
----
-
-
-
 
 - **Backend Framework:** ASP.NET Core 9.0
 - **ORM:** Entity Framework Core
@@ -68,6 +63,10 @@ Employees can submit leave requests online, while administrators (Admins) are ab
   DI is leveraged to manage system dependencies, promoting loose coupling between components, improving maintainability, and allowing easier extensibility of the system.
 - **SOLID Principles:** some of SOLID Principles  such as the single responsibility principle , Dependency Inversion Principle.
 
+- ✅ **Repository Pattern**  
+  Abstracts the data access logic and provides a centralized place for CRUD operations, enhancing separation of concerns and testability of the data layer.
+- ✅ **Unit of Work Pattern**  
+  Coordinates the work of multiple repositories by ensuring a single transaction for multiple operations. This pattern ensures data consistency and simplifies commit/rollback logic.
 - **Authentication & Authorization:** ASP.NET Core Identity
 
   
@@ -85,7 +84,9 @@ Employees can submit leave requests online, while administrators (Admins) are ab
 
 - **🔄 Mapping: Mapster :**  
   Employs efficient object mapping between models to improve data handling and reduce boilerplate code.
-
+- **🧠 Fluent API Configuration:**  
+  Uses Fluent API in Entity Framework Core to configure entity relationships, constraints, and behaviors directly in the code, ensuring database schema precision and flexibility.
+  
 - **✅ Fluent Validation:**  
   Ensures data integrity by rigorously validating inputs, resulting in user-friendly error messages.
 
@@ -99,7 +100,7 @@ Automatically seeds essential data, including admin roles and users, to ensure t
 
 ### **Prerequisites**
 
-- **.NET 8.0 SDK**
+- **.NET 0.0 SDK**
 - **SQL Server**
 - **Visual Studio 2022** (or **VS Code**)
 
@@ -107,11 +108,11 @@ Automatically seeds essential data, including admin roles and users, to ensure t
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/MohammedAwadEleash/AspDotNetMVCBookifyApplication
+   git clone https://github.com/MohammedAwadEleash/EmployeeLeaveManagementAPI.git
    ```
 2. **Navigate to the project folder**:
    ```bash
-   cd  Bookify
+   cd  EmployeeLeaveManagementAPI
 
    ```
 3. **Restore project dependencies**:
@@ -131,7 +132,18 @@ Automatically seeds essential data, including admin roles and users, to ensure t
 ### **Configuration**
 
 - All necessary configuration settings, such as connection strings and API keys, are stored in `appsettings.json`.
-- **Serilog** is pre-configured to log data based on the settings in `appsettings.json`.
-- **Hangfire Dashboard** is accessible at `/hangfire` (requires admin role).
 
 ---
+## 📖 API Documentation (Swagger UI):
+
+![Swagger UI - Google Chrome 4_19_2025 12_26_35 AM](https://github.com/user-attachments/assets/cd2fd84d-b315-4bbe-bb2c-c214f3573ff7)
+
+![Swagger UI - Google Chrome 4_19_2025 12_14_07 AM](https://github.com/user-attachments/assets/d3707edf-1ea4-4e1d-abb1-854a6de9fb21)
+
+![Swagger UI - Google Chrome 4_19_2025 12_14_07 AM](https://github.com/user-attachments/assets/d3707edf-1ea4-4e1d-abb1-854a6de9fb21)
+
+
+![Swagger UI - Google Chrome 4_19_2025 12_13_48 AM](https://github.com/user-attachments/assets/9e98613c-a4ae-4e34-8e8a-d3614ebaf5b5)
+
+![Swagger UI - Google Chrome 4_19_2025 12_14_14 AM](https://github.com/user-attachments/assets/6355d108-1bb1-4825-a422-c9e1cbf2e030)
+

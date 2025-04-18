@@ -1,12 +1,9 @@
-﻿
-using Microsoft.AspNetCore.Identity.UI.Services;
-
-namespace EmployeeLeaveManagementAPI.Extensions
+﻿namespace EmployeeLeaveManagementAPI.Extensions
 {
-    public static  class DependencyInjection
+    public static class DependencyInjection
     {
 
-        public static IServiceCollection AddServices(this IServiceCollection services, IConfiguration configuration )
+        public static IServiceCollection AddServices(this IServiceCollection services, IConfiguration configuration)
         {
 
 
@@ -15,8 +12,8 @@ namespace EmployeeLeaveManagementAPI.Extensions
             var connectionString = configuration.GetConnectionString("DefaultConnection") ??
                 throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
 
-           services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(connectionString));
+            services.AddDbContext<ApplicationDbContext>(options =>
+                 options.UseSqlServer(connectionString));
             services.AddSwaggerServices().AddAuthServices(configuration).AddMapsterService().AddFluentValidationService();
 
             services.AddScoped<IAuthService, AuthService>();
@@ -28,7 +25,7 @@ namespace EmployeeLeaveManagementAPI.Extensions
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             services.AddScoped<ILeaveRequestService, LeaveRequestService>();
-            // Handel the Exception:
+            // Handel the Errors:
             services.AddProblemDetails();
 
 

@@ -1,9 +1,3 @@
-using EmployeeLeaveManagementAPI.Extensions;
-using EmployeeLeaveManagementAPI.Persistence;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -23,7 +17,7 @@ await DefaultUsers.SeedAdminUserAsync(userManger);
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-   // app.MapOpenApi();
+    // app.MapOpenApi();
     app.UseSwagger();
     app.UseSwaggerUI();
 }

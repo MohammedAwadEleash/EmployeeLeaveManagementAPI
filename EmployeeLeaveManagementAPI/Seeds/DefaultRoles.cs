@@ -11,7 +11,7 @@ namespace EmployeeLeaveManagementAPI.Seeds
             {
 
                 await roleManger.CreateAsync(new IdentityRole(ApplicationRoles.Admin));
-               
+
 
             }
         }

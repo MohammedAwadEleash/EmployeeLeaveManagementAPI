@@ -37,7 +37,7 @@ public static class Errors
 
     public static readonly Error UserNotFound =
         new("User.UserNotFound", "User is not found", StatusCodes.Status404NotFound);
-    public  static readonly Error RequestNotFound =
+    public static readonly Error RequestNotFound =
         new("User.RequestNotFound", "Request of Leave is not found", StatusCodes.Status404NotFound);
     public static readonly Error LeaveRequestNotFound =
     new("LeaveRequestNotFound.NotFound", "Leave Request is not found", StatusCodes.Status404NotFound);

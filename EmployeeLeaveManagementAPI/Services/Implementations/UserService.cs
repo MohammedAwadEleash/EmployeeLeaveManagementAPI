@@ -4,7 +4,7 @@
 
 namespace EmployeeLeaveManagementAPI.Services.Implementations
 {
-    public class UserService(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager ,ApplicationDbContext context) : IUserService
+    public class UserService(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager, ApplicationDbContext context) : IUserService
     {
         private readonly UserManager<ApplicationUser> _userManager = userManager;
         private readonly RoleManager<IdentityRole> _roleManager = roleManager;
@@ -37,17 +37,17 @@ namespace EmployeeLeaveManagementAPI.Services.Implementations
             var emailIsExists = await _userManager.Users.AnyAsync(u => u.Email == request.Email, cancellationToken);
             if (emailIsExists)
                 return Result.Failure<UserResponse>(Errors.DuplicatedEmail);
-           
+
             var user = request.Adapt<ApplicationUser>();
 
 
             var result = await _userManager.CreateAsync(user, request.Password);
             user.EmailConfirmed = true;
 
-            foreach(var roleName in request.Roles)
+            foreach (var roleName in request.Roles)
             {
 
-                var roleIsExists =await  _roleManager.RoleExistsAsync(roleName);
+                var roleIsExists = await _roleManager.RoleExistsAsync(roleName);
                 if (!roleIsExists)
                     await _roleManager.CreateAsync(new IdentityRole(roleName));
             }

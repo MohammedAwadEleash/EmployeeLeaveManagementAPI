@@ -192,7 +192,7 @@ namespace EmployeeLeaveManagementAPI.Services.Implementations
 
         }
 
-        private async Task<IEnumerable<string>>GetUserRolesAndPermissions(ApplicationUser user, CancellationToken cancellationToken) 
+        private async Task<IEnumerable<string>> GetUserRolesAndPermissions(ApplicationUser user, CancellationToken cancellationToken)
             => await _userManager.GetRolesAsync(user);
 
 

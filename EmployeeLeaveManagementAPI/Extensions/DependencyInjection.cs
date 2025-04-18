@@ -57,7 +57,6 @@ namespace EmployeeLeaveManagementAPI.Extensions
 
             services.AddSingleton<IJwtProvider, JwtProvider>();
 
-            //services.Configure<JwtOptions>(configuration.GetSection(JwtOptions.SectionName));
             services.AddOptions<JwtOptions>()
                 .BindConfiguration(JwtOptions.SectionName)
             .ValidateDataAnnotations()

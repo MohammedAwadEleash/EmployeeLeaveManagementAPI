@@ -140,6 +140,9 @@ Automatically seeds essential data, including admin roles and users, to ensure t
 
 ![Swagger UI - Google Chrome 4_19_2025 12_14_07 AM](https://github.com/user-attachments/assets/d3707edf-1ea4-4e1d-abb1-854a6de9fb21)
 
+![Swagger UI - Google Chrome 4_19_2025 12_13_38 AM](https://github.com/user-attachments/assets/e3e53e56-8a26-47bd-9524-f698f66175f8)
+
+
 ![Swagger UI - Google Chrome 4_19_2025 12_13_48 AM](https://github.com/user-attachments/assets/5cd87475-2164-4f43-9118-2253e47302de)
 
 
